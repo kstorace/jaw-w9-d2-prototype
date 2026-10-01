@@ -130,7 +130,9 @@ main { min-width: 0; padding: 34px 40px 60px; }
 .decision-box { margin-top: 18px; padding: 20px; border: 1px solid #bfd0da; border-radius: 9px; background: #f5f9fb; }
 .decision-box h2 { margin: 0 0 5px; font-size: 19px; }
 .decision-box p { margin: 0; color: var(--muted); }
+.decision-box .button-row + .small-note { margin-top: 10px; }
 .document-preview { border: 1px solid var(--line); border-radius: 8px; background: white; min-height: 410px; overflow: hidden; }
+.document-preview + .document-preview { margin-top: 24px; }
 .document-toolbar { border-bottom: 1px solid var(--line); padding: 10px 14px; color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; }
 .letter { padding: 28px 34px; line-height: 1.55; color: #3e5061; }
 .letter h3 { color: var(--ink-strong); margin: 0 0 24px; }
