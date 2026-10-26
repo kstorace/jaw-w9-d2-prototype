@@ -1,0 +1,2 @@
+// Native-backed presentation only. No File/FileList copies, parsing or domain state.
+export function mountEvidenceImport(){const input=document.getElementById('evidence-files'),button=document.querySelector('[data-choose-evidence-files]'),selection=document.getElementById('evidence-selection');if(!input||!button||!selection)return;const describe=()=>{const count=input.files.length;selection.textContent=count===0?'No files selected':count===1?'1 file selected':`${count} files selected`;};button.onclick=()=>input.click();input.addEventListener('change',describe);describe();}

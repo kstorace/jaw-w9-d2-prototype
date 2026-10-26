@@ -1,0 +1,88 @@
+@font-face{font-family:"Source Sans 3";src:url("assets/fonts/SourceSans3-Regular.woff2");font-weight:400}
+@font-face{font-family:"Source Sans 3";src:url("assets/fonts/SourceSans3-Semibold.woff2");font-weight:600}
+@font-face{font-family:"Source Serif 4";src:url("assets/fonts/SourceSerif4-Regular.woff2");font-weight:400}
+/* R1-A: approved shared foundations. Domain layouts/renderers remain in their original sheets. */
+:root{--surface:#fcfaf6;--evidence:#f0f3f2;--control:#76858a;--focus:#376877;--applicant-accent:#245980;--vacancy-accent:#806023;--foundation-sidebar:224px;--foundation-gutter:32px}
+body{font:400 16px/24px "Source Sans 3",Arial,sans-serif}
+/* Coordinated shell: logo stays on the sidebar axis, navigation starts on the content axis. */
+#app>header{height:88px;min-height:88px;display:grid;grid-template-columns:calc(var(--foundation-sidebar) - 12px) minmax(0,1fr) auto;column-gap:0;padding:12px 32px;background:var(--surface)}
+#app>header .brand{display:block;width:174px;max-width:100%;line-height:0}
+#app>header .brand img{display:block;width:100%;height:auto;max-width:100%}
+#app>header>nav{margin:0;gap:16px;justify-content:flex-start;min-width:0}
+#app>header>nav a{padding:0 12px;white-space:nowrap;font:400 16px/24px "Source Sans 3",Arial,sans-serif;position:relative;border-bottom:0}
+#app>header>nav a[aria-current=page]{font-weight:600}
+#app>header>nav a[aria-current=page]:after{content:'';height:2px;background:var(--ink);position:absolute;bottom:8px;left:15px;right:15px;border-radius:3px 3px 0 0}
+#app>header .identity{font:400 16px/24px "Source Sans 3",Arial,sans-serif;margin-left:auto}
+#app>.layout{grid-template-columns:var(--foundation-sidebar) minmax(0,1fr);min-height:calc(100dvh - 88px)}
+#app>.layout>aside{padding:24px 16px 24px 0}
+#app>.layout>aside .overline{margin:0 0 16px 24px}
+#app>.layout>aside .local-navigation{top:calc(var(--navigation-header-height) + 24px);max-height:calc(100dvh - var(--navigation-header-height) - 48px);overflow-y:auto}
+#app>.layout>aside .local-nav{gap:4px;margin:0 0 24px}
+#app>.layout>aside .local-nav a{min-height:48px;padding:12px 16px 12px 24px;font:400 16px/24px "Source Sans 3",Arial,sans-serif}
+#app>.layout>aside .local-nav a[aria-current=location]{font-weight:600}
+#app>.layout>aside .text-button{margin-left:24px}
+#app>.layout>main{max-width:1056px;padding:24px var(--foundation-gutter) 48px}
+/* JAW-authored semantic roles. Document/source content is deliberately outside these selectors. */
+main h1:not(.document *){font:400 32px/40px "Source Serif 4",Georgia,serif;letter-spacing:normal;margin:8px 0 16px}
+main h2:not(.document *){font:400 24px/32px "Source Sans 3",Arial,sans-serif;margin:0 0 16px;letter-spacing:normal}
+main h3:not(.document *){font:600 20px/28px "Source Sans 3",Arial,sans-serif;margin:0 0 8px}
+.empty h1{max-width:650px}
+.empty{padding:24px 0 48px}
+.hero{padding:8px 0 32px;margin-bottom:32px}
+.lede{font:400 18px/27px "Source Sans 3",Arial,sans-serif}
+.overline{font:600 14px/21px "Source Sans 3",Arial,sans-serif;letter-spacing:.035em;text-transform:uppercase}
+.context,.meta,.small,.required,.samples,.choice small,footer,.timeline{font:400 14px/21px "Source Sans 3",Arial,sans-serif}
+.context{margin-bottom:24px;gap:16px}
+.context .dot:before{color:var(--muted)}
+.state-step{font:400 14px/21px "Source Sans 3",Arial,sans-serif}
+.state-step.current{font-weight:600}
+main strong:not(.document *):not(.assertions *){font-weight:600}
+.note{background:var(--evidence);border-left-color:var(--control);font:400 16px/24px "Source Sans 3",Arial,sans-serif;margin:24px 0;padding:16px 24px}
+.upload{padding:24px;border-color:var(--control);margin-top:24px}
+.upload label{font:600 20px/28px "Source Sans 3",Arial,sans-serif}
+.upload input,legend,button,input,select,textarea,.button{font-family:"Source Sans 3",Arial,sans-serif;font-size:16px;line-height:24px}
+legend{font-weight:600}
+button,input,select,textarea,.button{font-weight:400}
+button.primary,.button:not(.secondary){font-weight:600}
+.package{background:var(--evidence)}
+.step{margin-top:32px;padding-top:24px;padding-bottom:24px}
+.inset{margin:24px 0}
+.alignment{font-size:16px;line-height:24px}
+.alignment th{font:600 14px/21px "Source Sans 3",Arial,sans-serif;letter-spacing:.035em}
+.alignment summary{font:400 16px/24px "Source Sans 3",Arial,sans-serif}
+/* Role-specific source colour; classification/workflow badges remain unchanged. */
+.badge{font:400 12px/18.6px Sans,Arial,sans-serif}
+.source-applicant{background:var(--blue);border-left-color:var(--applicant-accent);padding:12px 16px;color:var(--ink)}
+.source-vacancy{background:var(--sand);border-left-color:var(--vacancy-accent);padding:12px 16px;color:var(--ink)}
+#reconciliation .assertions blockquote{background:var(--evidence);border-left-color:var(--control);padding:12px 16px}
+.assertions>article>strong{font:400 20px/28px "Source Sans 3",Arial,sans-serif;margin:8px 0}
+.alignment blockquote{font-size:16px;line-height:24px}
+.source-applicant,.source-vacancy{margin:16px 0}
+.navigation-toggle:focus-visible,.navigation-drawer :focus-visible,#app main :focus-visible{outline-color:var(--focus)}
+.navigation-drawer [data-navigation-close]{border-color:var(--control)}
+/* Preserve document previews, extracted source text and editor rendering verbatim. */
+.document{font-family:Sans,Arial,sans-serif}
+.document .meta,.document .small{font-family:Sans,Arial,sans-serif;line-height:1.55}
+.document button,.document input,.document textarea{font:inherit}
+.plain.small{font:400 14px/21.7px Sans,Arial,sans-serif}
+.document-editor{font:16px/1.6 Sans,Arial,sans-serif}
+@media(max-width:1100px){
+ :root{--foundation-sidebar:196px;--foundation-gutter:24px}
+ #app>header{padding:12px 24px}
+ #app>header>nav{gap:8px}
+}
+@media(width < 1024px){
+ #app>header{height:76px;min-height:76px;display:flex;gap:12px;padding:12px 24px}
+ #app>header .brand{width:144px;flex:0 0 144px}
+ #app>header .identity{font-size:14px;line-height:21px;white-space:normal}
+ #app>.layout{display:block;min-height:calc(100dvh - 76px)}
+ #app>.layout>main{padding:24px var(--foundation-gutter) 48px}
+ main h1:not(.document *){font-size:28px;line-height:36px}
+}
+@media(max-width:600px){
+ :root{--foundation-gutter:16px}
+ #app>header{padding:12px 16px;gap:8px}
+ #app>.layout>main{padding:24px 16px 32px}
+ .context{flex-wrap:wrap;gap:4px 16px}
+}
+@media(max-width:440px){#app>header .brand{width:130px;flex-basis:130px}}

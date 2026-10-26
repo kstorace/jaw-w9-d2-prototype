@@ -1,0 +1,7 @@
+// Listing-owned synthetic presentation only. Never inserted into a domain store.
+const example=(id,employer,role,status,preparation,conditions,explanation)=>Object.freeze({id,employer,role,status,condition:status==='Ready to submit'?'':id==='R1E-LIST-ILL-A'?'Clarification':'Document review',preparation,conditions:Object.freeze(conditions),explanation,provenance:'R1-E listing-only synthetic presentation fixture; no real vacancy, applicant decision, document or package.'});
+export const applicationsExamples=Object.freeze([
+ example('R1E-LIST-ILL-A','Nordfeld Packaging GmbH','Strategic Purchasing Manager','Preparing','Clarification outstanding.',['Permanent','Full-time','On-site'],'This synthetic example represents preparation awaiting a clarification. No actual Application Record exists.'),
+ example('R1E-LIST-ILL-B','Heliosen Industrial Systems GmbH','Senior Procurement Specialist','Preparing','Documents in progress.',['Fixed-term','Part-time','Hybrid'],'This synthetic example represents document preparation in progress. No actual Application Record or application documents exist.'),
+ example('R1E-LIST-ILL-C','Weserholm Components GmbH','Category Manager, Direct Materials','Ready to submit','Example of a completed pre-submission preparation state.',['Permanent','Full-time','Flexible hours'],'This synthetic example illustrates a ready-to-submit listing state. No actual Application Record or approved package exists; no documents can be downloaded or submitted.')
+]);

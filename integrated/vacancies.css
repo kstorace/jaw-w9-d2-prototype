@@ -1,0 +1,256 @@
+/* R1-B only: Stage6 unified requirements/paired registers and neutral decision territory.
+   Scoped source roles and approved Slice3 signposts; no shared .badge/.choice/.good changes. */
+.rb-vacancies{--rb-lavender:#e6e4ef;--rb-lavender-accent:#665b83;--rb-teal:#d6e6e4;--rb-teal-accent:#276b69;--rb-chevron:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6'%3E%3Cpath d='M1.5 .75L4.5 3L1.5 5.25' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.rb-vacancies .rb-opportunities{padding-bottom:24px}
+.rb-vacancies .rb-opportunities>.row{padding:16px 0;gap:24px}
+.rb-vacancies .rb-assessment{border-top:2px solid var(--ink);margin-top:24px;padding-top:24px}
+.rb-vacancies .rb-vacancy-identity{padding:0 0 24px;border-bottom:1px solid var(--rule);margin-bottom:24px}
+.rb-vacancies .rb-vacancy-identity h2{margin:16px 0 8px}
+.rb-vacancies .rb-vacancy-identity h3{margin:0 0 8px}
+.rb-vacancies .rb-source-identity{margin-top:12px}
+.rb-vacancies .rb-assessment-summary{max-width:90ch;margin-bottom:24px}
+.rb-vacancies .rb-requirement{border-top:1px solid var(--rule);padding:24px 0;min-width:0}
+.rb-vacancies .rb-unit-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,.65fr);gap:24px;align-items:first baseline}
+.rb-vacancies .rb-unit-heading>div{min-width:0}
+.rb-vacancies .rb-unit-heading h3{overflow-wrap:anywhere}
+.rb-vacancies .rb-priority{font:400 14px/21px "Source Sans 3",Arial,sans-serif;margin:8px 0;color:var(--ink)}
+.rb-vacancies .rb-priority>span{display:block;color:var(--muted)}
+.rb-vacancies .rb-relationship{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+.rb-vacancies .rb-label{font:400 14px/21px "Source Sans 3",Arial,sans-serif;color:var(--muted)}
+.rb-vacancies .rb-signpost{display:inline-block;min-height:22px;max-width:100%;padding:0 8px;border:1px solid transparent;border-radius:4px;font:600 14px/20px "Source Sans 3",Arial,sans-serif;white-space:normal;overflow-wrap:anywhere;background:var(--evidence);color:var(--ink)}
+.rb-vacancies .rb-direct{background:var(--blue);color:var(--applicant-accent);border-color:transparent}
+.rb-vacancies .rb-transferable{background:var(--rb-lavender);color:var(--rb-lavender-accent);border-color:transparent}
+.rb-vacancies .rb-unresolved{background:var(--sand);border-color:transparent}
+.rb-vacancies .rb-qualification{margin:12px 0;font:400 16px/24px "Source Sans 3",Arial,sans-serif;border-left:2px solid var(--control);padding-left:12px;max-width:90ch;overflow-wrap:anywhere}
+.rb-vacancies .rb-support{margin:12px 0 0}
+.rb-vacancies .rb-support>summary,.rb-vacancies .rb-source-review>summary{display:grid;grid-template-columns:6px minmax(0,1fr);gap:10px;align-items:first baseline;list-style:none;font:400 16px/24px "Source Sans 3",Arial,sans-serif;padding:6px 0;min-height:32px}
+.rb-vacancies .rb-support>summary::-webkit-details-marker,.rb-vacancies .rb-source-review>summary::-webkit-details-marker{display:none}
+.rb-vacancies .rb-support>summary::marker,.rb-vacancies .rb-source-review>summary::marker{content:''}
+.rb-vacancies .rb-support>summary:before,.rb-vacancies .rb-source-review>summary:before{content:'';position:relative;display:inline-block;width:6px;height:6px;background:currentColor;mask:var(--rb-chevron) center/6px 6px no-repeat;-webkit-mask:var(--rb-chevron) center/6px 6px no-repeat;inset-block-start:calc(3px - .5cap);transform-origin:center}
+.rb-vacancies .rb-support[open]>summary:before,.rb-vacancies .rb-source-review[open]>summary:before{transform:rotate(90deg)}
+.rb-vacancies .rb-source-comparison{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;margin-top:24px;min-width:0}
+.rb-vacancies .rb-source-register{min-width:0}
+.rb-vacancies .rb-source-label{font:600 14px/21px "Source Sans 3",Arial,sans-serif;letter-spacing:.035em;text-transform:uppercase;margin:0 0 12px;color:var(--muted)}
+.rb-vacancies .rb-source-register:first-child>.rb-source-label{color:var(--vacancy-accent)}
+.rb-vacancies .rb-source-register:last-child>.rb-source-label{color:var(--applicant-accent)}
+.rb-vacancies .rb-source-register blockquote{margin:0 0 12px;padding:12px 16px;font:400 16px/24px "Source Sans 3",Arial,sans-serif;overflow-wrap:anywhere}
+.rb-vacancies .rb-citation{margin-bottom:16px}
+.rb-vacancies .rb-citation .meta{overflow-wrap:anywhere}
+.rb-vacancies .rb-interpretation{margin-top:24px;padding-top:16px;border-top:1px solid var(--rule);max-width:90ch}
+.rb-vacancies .rb-interpretation .meta{margin-top:8px}
+.rb-vacancies .rb-practical,.rb-vacancies .rb-decision{border-top:2px solid var(--ink);padding-top:24px;margin-top:32px}
+.rb-vacancies .rb-practical-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:24px 0}
+.rb-vacancies .rb-practical-grid>div{border-top:1px solid var(--rule);padding-top:16px;min-width:0}
+.rb-vacancies .rb-practical-grid dt{font:600 20px/28px "Source Sans 3",Arial,sans-serif;margin:0 0 12px}
+.rb-vacancies .rb-practical-grid dd{margin:0}
+.rb-vacancies .rb-practical-grid dd>p{margin-top:12px;overflow-wrap:anywhere}
+.rb-vacancies .rb-practical-grid .badge{font:600 14px/20px "Source Sans 3",Arial,sans-serif;min-height:22px;padding:0 8px;border:1px solid transparent;border-radius:4px;white-space:normal}
+.rb-vacancies .rb-practical-grid .badge.good{background:var(--rb-teal);color:var(--rb-teal-accent)}
+.rb-vacancies .rb-practical-grid .badge.caution{background:var(--sand);color:var(--ink)}
+.rb-vacancies .rb-decision{padding-bottom:32px;border-bottom:2px solid var(--ink)}
+.rb-vacancies .rb-decision-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}
+.rb-vacancies .rb-decision-choice{border:1px solid var(--control);border-radius:4px;background:var(--surface);padding:24px;min-width:0}
+.rb-vacancies #decision .rb-decision-choice>button{display:block;width:100%;min-height:44px;background:transparent;color:var(--ink);border:0;border-radius:0;padding:8px 0;font:600 20px/28px "Source Sans 3",Arial,sans-serif;text-align:left}
+.rb-vacancies .rb-decision-choice>p{font:400 16px/24px "Source Sans 3",Arial,sans-serif;color:var(--muted);margin-top:12px}
+.rb-vacancies .rb-decision-choice:hover{background:var(--evidence)}
+.rb-vacancies .rb-intake{margin-top:48px;padding-top:24px;border-top:2px solid var(--control)}
+@media(width < 1024px){
+ .rb-vacancies .rb-source-comparison,.rb-vacancies .rb-practical-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+ .rb-vacancies .rb-unit-heading{grid-template-columns:minmax(0,1fr);gap:8px}
+ .rb-vacancies .rb-source-comparison{margin-top:16px}
+}
+@media(max-width:700px){.rb-vacancies .rb-decision-options{grid-template-columns:minmax(0,1fr)}.rb-vacancies .rb-decision-choice{padding:16px}}
+
+/* R1-B-r2: V15 role-specific summaries and the accepted optical chevron. */
+.rb-vacancies [hidden]{display:none!important}
+.rb-vacancies .rb-opportunity{border-top:1px solid var(--rule);padding:24px 0;min-width:0}
+.rb-vacancies .rb-entry-heading{margin:0}
+.rb-vacancies .rb-vacancy-toggle{display:grid;grid-template-columns:6px minmax(0,1fr);gap:10px;align-items:first baseline;width:100%;padding:0;background:transparent;color:var(--ink);border:0;border-radius:0;text-align:left;font:600 20px/28px "Source Sans 3",Arial,sans-serif;min-height:44px}
+.rb-vacancies .rb-vacancy-toggle>span:last-child{min-width:0}
+.rb-vacancies .rb-employer,.rb-vacancies .rb-role{display:block;overflow-wrap:anywhere}
+.rb-vacancies .rb-role{font:400 18px/27px "Source Sans 3",Arial,sans-serif;margin-top:4px}
+.rb-vacancies .rb-provenance{font:400 14px/21px "Source Sans 3",Arial,sans-serif;color:var(--muted);margin:8px 0 12px;overflow-wrap:anywhere}
+.rb-vacancies .rb-counts{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.rb-vacancies .rb-counts .rb-signpost{flex:0 0 auto}
+.rb-vacancies .rb-practical-summary{margin:12px 0 0;color:var(--muted);max-width:90ch;overflow-wrap:anywhere}
+.rb-vacancies [data-vacancy-panel]{margin-top:24px;min-width:0}
+.rb-vacancies .rb-summary-detail{max-width:83ch;padding-left:16px;border-left:2px solid var(--rule)}
+.rb-vacancies .rb-summary-detail h4{font:600 16px/24px "Source Sans 3",Arial,sans-serif;margin:16px 0 8px}
+.rb-vacancies details>summary{display:grid;grid-template-columns:6px minmax(0,1fr);gap:10px;align-items:first baseline;list-style:none;font:400 16px/24px "Source Sans 3",Arial,sans-serif;padding:6px 0;min-height:32px}
+.rb-vacancies details>summary::-webkit-details-marker{display:none}
+.rb-vacancies details>summary::marker{content:''}
+.rb-vacancies details>summary:before,.rb-vacancies .rb-chevron{content:'';position:relative;display:inline-block;width:6px;height:6px;min-width:6px;max-width:6px;min-height:6px;max-height:6px;padding:0;margin:0;border:0;background:currentColor;mask:var(--rb-chevron) center/6px 6px no-repeat;-webkit-mask:var(--rb-chevron) center/6px 6px no-repeat;inset-block-start:calc(3px - .5cap);transform:none;transform-origin:center;transition:none}
+.rb-vacancies details[open]>summary:before,.rb-vacancies [aria-expanded=true]>.rb-chevron{transform:rotate(90deg)}
+.rb-vacancies .rb-vacancy-toggle:focus-visible{outline:2px solid var(--focus);outline-offset:5px}
+@media(width < 1024px){.rb-vacancies .rb-counts .rb-signpost{min-height:19px;line-height:17px}.rb-vacancies .rb-vacancy-toggle{font-size:20px}}
+
+/* R3 comparison: coherent identity indent and stable categorical register. */
+.rb-vacancies .rb-opportunities{padding-bottom:16px}
+.rb-vacancies .rb-opportunity{border:0;padding:8px 0;margin:0 0 16px}
+.rb-vacancies .rb-entry-line{display:grid;grid-template-columns:minmax(0,1fr) 466px;gap:0 24px;align-items:start}
+.rb-vacancies .rb-entry-identity{min-width:0}
+.rb-vacancies .rb-entry-information{margin-left:16px;min-width:0}
+.rb-vacancies .rb-entry-heading{margin:0}
+.rb-vacancies .rb-vacancy-toggle{min-height:44px;padding:8px 0;font:600 20px/28px "Source Sans 3",Arial,sans-serif}
+.rb-vacancies .rb-entry-identity>.rb-role{margin:0 0 4px 16px;font:400 16px/24px "Source Sans 3",Arial,sans-serif}
+.rb-vacancies .rb-entry-information>.rb-provenance{margin:0 0 4px}
+.rb-vacancies .rb-entry-information>.rb-practical-summary{margin:0;font:400 16px/24px "Source Sans 3",Arial,sans-serif;max-width:none}
+.rb-vacancies .rb-entry-line>.rb-counts{display:grid;grid-template-columns:88px 126px 116px 112px;gap:8px;margin:10px 0 0;padding:0;justify-content:end;align-items:start}
+.rb-vacancies .rb-counts>.rb-signpost{justify-self:start;white-space:nowrap;overflow-wrap:normal}
+.rb-vacancies .rb-entry-information>[data-vacancy-panel]{margin-top:12px}
+.rb-vacancies .rb-summary-detail{border:0;padding:0;margin:0}
+.rb-vacancies .rb-summary-detail>p{margin:0 0 8px}
+.rb-vacancies .rb-summary-detail h4{margin:8px 0 4px}
+.rb-vacancies .back-link{display:inline-block;margin:8px 0 16px}
+@media(max-width:1199px){
+ .rb-vacancies .rb-entry-line{grid-template-columns:minmax(0,1fr);gap:0}
+ .rb-vacancies .rb-entry-line>.rb-counts{margin:4px 0 8px 16px;justify-content:start}
+}
+@media(max-width:600px){
+ .rb-vacancies .rb-entry-line>.rb-counts{grid-template-columns:repeat(2,max-content);gap:4px 8px}
+ .rb-vacancies .rb-opportunity{padding:4px 0;margin-bottom:16px}
+}
+
+.rb-vacancies[data-view="assessment"]{scroll-margin-top:calc(var(--navigation-header-height) + 20px)}
+
+/* R4: one generic intake territory; retain control/provenance boundaries. */
+.rb-vacancies .rb-intake{margin-top:24px;padding-top:24px;border-top:1px solid var(--rule)}
+.rb-vacancies .rb-intake>h2{margin-bottom:8px}
+.rb-vacancies .rb-intake>p{margin:0 0 16px}
+.rb-vacancies .rb-intake-methods{max-width:72ch}
+.rb-vacancies .rb-intake-methods>label{display:block;font:600 16px/24px "Source Sans 3",Arial,sans-serif;margin-bottom:8px}
+.rb-vacancies .rb-intake-methods>input[type=file]{display:block;width:100%;max-width:100%;min-height:44px;padding:8px;border:1px solid var(--control);border-radius:4px;background:var(--surface);font:400 16px/24px "Source Sans 3",Arial,sans-serif}
+.rb-vacancies .rb-intake-methods>details{margin:8px 0 0;border:0;padding:0}
+.rb-vacancies .rb-intake-methods form{margin-top:8px}
+.rb-vacancies .rb-intake-methods .actions{margin-top:12px}
+.rb-vacancies .rb-role-provenance{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:16px;row-gap:0;margin:0 0 4px}
+.rb-vacancies .rb-role-provenance>.rb-role{font:400 16px/24px "Source Sans 3",Arial,sans-serif;margin:0;max-width:100%}
+.rb-vacancies .rb-role-provenance>.rb-provenance{position:relative;font:400 14px/21px "Source Sans 3",Arial,sans-serif;margin:0;max-width:100%;overflow-wrap:anywhere}
+.rb-vacancies .rb-role-provenance[data-inline=true]>.rb-provenance::before{content:'';position:absolute;left:-8px;top:4px;height:12px;border-left:1px solid var(--muted);pointer-events:none}
+.local-nav .navigation-reset{margin-top:16px}
+.local-nav .navigation-reset>.text-button{min-height:44px}
+
+.rb-vacancies .hero{border-bottom:0}
+
+.rb-vacancies .rb-opportunities{padding-bottom:0}
+.rb-vacancies .rb-opportunities>.rb-opportunity:last-child{margin-bottom:0}
+.rb-vacancies .rb-intake{padding-top:16px}
+
+/* R5 overview only: neutral grouping accent; assessment/decision CSS untouched. */
+.rb-vacancies .rb-opportunity{display:grid;grid-template-columns:minmax(0,1fr) 466px;gap:8px 24px;border-left:2px solid var(--control);padding:8px 0 8px 16px;margin-bottom:24px}
+.rb-vacancies .rb-opportunity>.rb-counts{display:grid;grid-template-columns:88px 126px 116px 112px;gap:8px;align-items:start;margin:4px 0 0;justify-content:end}
+.rb-vacancies .rb-entry-heading{font:600 20px/28px "Source Sans 3",Arial,sans-serif;min-width:0}
+.rb-vacancies .rb-employer{font:inherit}
+.rb-vacancies .rb-entry-information{grid-column:1;grid-row:2;margin-left:0}
+.rb-vacancies .rb-text-group{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:16px;row-gap:0}
+.rb-vacancies .rb-text-group>span{position:relative;max-width:100%;overflow-wrap:anywhere}
+.rb-vacancies .rb-text-group>span[data-joined=true]::before{content:'';position:absolute;left:-8px;top:.3em;height:.8em;border-left:1px solid var(--muted);pointer-events:none}
+.rb-vacancies .rb-role-provenance{margin:0 0 8px}
+.rb-vacancies .rb-vacancy-facts{font:400 14px/21px "Source Sans 3",Arial,sans-serif;color:var(--muted);margin-bottom:8px}
+.rb-vacancies .rb-practical-register{grid-column:2;grid-row:2;display:grid;grid-template-columns:1fr 1fr;gap:16px;min-width:0}
+.rb-vacancies .rb-practical-register p{font:400 14px/21px "Source Sans 3",Arial,sans-serif;color:var(--muted);margin:4px 0 0;overflow-wrap:anywhere}
+.rb-vacancies .rb-compatible{background:#D6E6E4;color:#276B69;border-color:transparent}
+.rb-vacancies .rb-entry-action{grid-column:2;grid-row:3;justify-self:end}
+.rb-vacancies .rb-detail-toggle{display:flex;align-items:baseline;gap:10px;min-height:36px;font:400 14px/21px "Source Sans 3",Arial,sans-serif}
+.rb-vacancies .rb-detail-toggle[aria-expanded=true]>.rb-chevron{transform:rotate(90deg)}
+.rb-vacancies .rb-bounded-detail [data-vacancy-panel]{margin-top:8px}
+@media(max-width:1199px){
+ .rb-vacancies .rb-opportunity{grid-template-columns:minmax(0,1fr);gap:8px}
+ .rb-vacancies .rb-opportunity>.rb-counts{grid-column:1;grid-row:3;justify-content:start;margin:0}
+ .rb-vacancies .rb-entry-information{grid-row:2}
+ .rb-vacancies .rb-practical-register{grid-column:1;grid-row:4}
+ .rb-vacancies .rb-entry-action{grid-column:1;grid-row:5;justify-self:start}
+}
+@media(max-width:600px){.rb-vacancies .rb-opportunity>.rb-counts{grid-template-columns:repeat(2,max-content)}.rb-vacancies .rb-opportunity{padding-left:12px}.rb-vacancies .rb-practical-register{gap:12px}}
+
+@media(min-width:1200px){.rb-vacancies .rb-practical-register{grid-template-columns:222px minmax(0,1fr);gap:8px}}
+
+/* R6 overview finishing. Existing full assessment and decision construction untouched. */
+.rb-vacancies .rb-overview-heading{display:grid;grid-template-columns:minmax(0,1fr) 466px;gap:24px;align-items:baseline;margin-bottom:12px}
+.rb-vacancies .rb-overview-heading h2{margin:0}
+.rb-vacancies .rb-register-heading{font:600 14px/21px "Source Sans 3",Arial,sans-serif;color:var(--muted);margin:0}
+.rb-vacancies .rb-opportunity{row-gap:4px;padding-top:4px;padding-bottom:4px;margin-bottom:16px}
+.rb-vacancies .rb-entry-information{grid-column:1/-1;grid-row:2}
+.rb-vacancies .rb-role-line{font:400 16px/24px "Source Sans 3",Arial,sans-serif;margin:0 0 4px}
+.rb-vacancies .rb-role-line .rb-provenance{font:400 14px/21px "Source Sans 3",Arial,sans-serif;color:var(--muted)}
+.rb-vacancies .rb-vacancy-facts{margin-bottom:0}
+.rb-vacancies .rb-summary-row{grid-column:1/-1;grid-row:3;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;min-width:0}
+.rb-vacancies .rb-summary-row>.rb-practical-summary{font:400 14px/21px "Source Sans 3",Arial,sans-serif;margin:0;color:var(--muted);max-width:none}
+.rb-vacancies .rb-summary-row>.rb-entry-action{grid-column:auto;grid-row:auto;justify-self:end}
+.rb-vacancies .rb-opportunity>[data-vacancy-panel]{grid-column:1/-1;margin-top:4px}
+.rb-vacancies .rb-intake{background:var(--evidence);border:0;border-radius:4px;padding:16px;margin-top:24px}
+.rb-vacancies .rb-intake-methods{display:flex;flex-wrap:wrap;gap:8px 16px;max-width:none;align-items:flex-start}
+.rb-vacancies .rb-intake-methods>label{flex-basis:100%;margin:0}
+.rb-vacancies .rb-intake-methods>input[type=file]{flex:1 1 360px;width:auto;min-width:0}
+.rb-vacancies .rb-intake-methods>details{flex:0 0 auto;margin:0}
+.rb-vacancies .rb-intake-methods>details>summary{min-height:44px;padding:10px 0}
+.rb-vacancies .rb-intake-methods>details[open]{flex-basis:100%}
+@media(max-width:1199px){
+ .rb-vacancies .rb-overview-heading{grid-template-columns:1fr;gap:4px}
+ .rb-vacancies .rb-opportunity>.rb-counts{grid-row:3}
+ .rb-vacancies .rb-summary-row{grid-row:4}
+}
+@media(max-width:600px){
+ .rb-vacancies .rb-summary-row{grid-template-columns:minmax(0,1fr);gap:4px}
+ .rb-vacancies .rb-summary-row>.rb-entry-action{justify-self:start}
+ .rb-vacancies .rb-intake-methods>input[type=file],.rb-vacancies .rb-intake-methods>details{flex-basis:100%;width:100%}
+}
+
+.rb-vacancies .rb-role-line>.rb-role,.rb-vacancies .rb-role-line>.rb-provenance{display:inline}
+
+/* R7: independently aligned action and bounded native intake presentation. */
+@media(min-width:1200px){
+ .rb-vacancies .rb-entry-information{grid-column:1;grid-row:2}
+ .rb-vacancies .rb-summary-row{display:contents}
+ .rb-vacancies .rb-summary-row>.rb-practical-summary{grid-column:1;grid-row:3}
+ .rb-vacancies .rb-summary-row>.rb-entry-action{grid-column:2;grid-row:2 / span 2;align-self:end;justify-self:end}
+ .rb-vacancies .rb-opportunity>[data-vacancy-panel]{grid-row:4}
+}
+.rb-vacancies .rb-intake{background:var(--evidence);border:1px solid var(--rule);border-radius:4px;padding:24px}
+.rb-vacancies .rb-intake-methods{gap:8px 24px;align-items:center}
+.rb-vacancies .rb-intake-methods>[data-choose-vacancy-file]{flex:0 0 auto;width:auto;align-self:flex-start}
+.rb-vacancies .rb-intake-methods>input[hidden]{display:none}
+.rb-vacancies .rb-intake-methods>details{flex:0 0 auto;width:auto;min-width:0}
+.rb-vacancies .rb-intake-methods>details[open]{flex:1 0 100%;width:100%}
+.rb-vacancies .rb-intake-methods form{width:100%;margin:8px 0 0;padding:0}
+.rb-vacancies .rb-intake-methods textarea{width:100%;margin-left:0}
+.rb-vacancies .rb-intake-error{margin:0 0 16px;font:400 16px/24px "Source Sans 3",Arial,sans-serif;color:var(--ink);overflow-wrap:anywhere}
+.rb-vacancies .rb-entry-heading:focus,.rb-vacancies .rb-intake-error:focus{outline:2px solid var(--focus);outline-offset:4px}
+@media(max-width:600px){
+ .rb-vacancies .rb-intake{padding:16px}
+ .rb-vacancies .rb-intake-methods>details{flex-basis:100%;width:100%}
+}
+
+/* R8: Tavera uses full-width text; illustrative opportunity layout is unchanged. */
+@media(min-width:1200px){
+ #overview-TAVERA-EK-2026-14{position:relative}
+ .rb-vacancies #overview-TAVERA-EK-2026-14>.rb-entry-information{grid-column:1/-1}
+ .rb-vacancies #overview-TAVERA-EK-2026-14>.rb-summary-row{display:block;grid-column:1/-1;grid-row:3}
+ #overview-TAVERA-EK-2026-14 .rb-entry-action{position:static;width:max-content;margin:8px 0 0 auto}
+ #overview-TAVERA-EK-2026-14.rb-action-anchored .rb-summary-row{padding-right:calc(var(--rb-action-width) + 16px)}
+ #overview-TAVERA-EK-2026-14.rb-action-anchored .rb-entry-action{position:absolute;right:0;bottom:4px;margin:0}
+}
+/* Stable action row and separate controlled input panel. Native details remains the control. */
+.rb-vacancies .rb-intake-methods{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 24px}
+.rb-vacancies .rb-intake-action-row{grid-column:1/-1;display:grid;grid-template-columns:subgrid;align-items:center}
+.rb-vacancies .rb-intake-action-row>[data-choose-vacancy-file]{grid-column:1;width:max-content}
+.rb-vacancies .rb-intake-action-row>input[hidden]{display:none}
+.rb-vacancies .rb-intake-action-row>.rb-paste-disclosure{grid-column:2;margin:0;padding:0;border:0;width:max-content;max-width:100%;min-width:0}
+.rb-vacancies .rb-paste-disclosure>summary{min-height:44px;padding:10px 0}
+.rb-vacancies #vacancy-paste-panel{grid-column:2;min-width:0}
+.rb-vacancies #vacancy-paste-panel[hidden]{display:none}
+@media(max-width:600px){
+ .rb-vacancies .rb-intake-methods{grid-template-columns:minmax(0,1fr)}
+ .rb-vacancies .rb-intake-action-row{gap:8px}
+ .rb-vacancies .rb-intake-action-row>.rb-paste-disclosure{grid-column:1}
+ .rb-vacancies #vacancy-paste-panel{grid-column:1}
+}
+
+/* R9: illustrative entries only. R8 Tavera and intake rules above remain exact. */
+@media(min-width:1200px){
+ .rb-vacancies .rb-opportunity[data-opportunity^="SOURCED-"]>.rb-entry-information{grid-column:1/-1}
+ .rb-vacancies .rb-opportunity[data-opportunity^="SOURCED-"]>.rb-summary-row{position:relative;display:block;grid-column:1/-1;grid-row:3}
+ .rb-vacancies .rb-opportunity[data-opportunity^="SOURCED-"] .rb-entry-action{position:static;width:max-content;margin:8px 0 0 auto}
+ .rb-vacancies .rb-opportunity.rb-illustrative-anchored>.rb-summary-row{padding-right:calc(var(--rb-illustrative-action-width) + 16px)}
+ .rb-vacancies .rb-opportunity.rb-illustrative-anchored .rb-entry-action{position:absolute;right:0;bottom:0;margin:0}
+}

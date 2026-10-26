@@ -1,0 +1,13 @@
+/* Stage 3 only: Profile lineage, preferences and reconciliation history. */
+#profile-details,#master-cv,#profile-evidence{min-width:0}
+#profile-evidence :is(p,strong,summary),#master-cv .document{overflow-wrap:anywhere;min-width:0}
+#profile-evidence details{min-width:0}
+#reconciliation>.muted{max-width:76ch;text-wrap:pretty}
+.ob-preferences .fields,#edit-preferences-form .fields{column-gap:36px}
+:is(#profile-form,#edit-preferences-form) .preference-error{margin:0 0 16px;padding:12px 16px;background:var(--evidence);border-left:2px solid var(--ink);overflow-wrap:anywhere}
+:is(#profile-form,#edit-preferences-form) .preference-error:focus{outline:3px solid var(--focus);outline-offset:4px}
+:is(#master-cv,#profile-evidence,#reconciliation) details>summary{list-style:none;cursor:pointer;position:relative;padding-left:16px}
+:is(#master-cv,#profile-evidence,#reconciliation) details>summary::-webkit-details-marker{display:none}
+:is(#master-cv,#profile-evidence,#reconciliation) details>summary::before{content:'';display:inline-block;position:absolute;left:0;top:calc(9px + .775em - 3px);width:6px;height:6px;border:0;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg);box-sizing:border-box}
+:is(#master-cv,#profile-evidence,#reconciliation) details[open]>summary::before{transform:rotate(135deg);top:calc(9px + .775em - 4px)}
+@media(max-width:760px){.ob-preferences .fields,#edit-preferences-form .fields{grid-template-columns:minmax(0,1fr);gap:16px}}

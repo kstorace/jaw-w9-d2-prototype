@@ -1,0 +1,17 @@
+/* R6: shared page-introduction composition only. Approved fonts remain in foundations.css. */
+#app main>.context{margin-bottom:8px;gap:8px 16px}
+#app main .compact-intro{padding:0 0 8px;margin:0 0 16px;border:0}
+#app main .compact-intro>h1{margin:0 0 8px}
+#app main .compact-intro>.lede{margin:0;max-width:80ch}
+#app main .compact-intro>.intro-id{margin:0 0 4px}
+#app main .compact-intro>h1{scroll-margin-top:calc(var(--navigation-header-height) + 52px)}
+#app main .compact-intro:has(.intro-id)>h1{scroll-margin-top:calc(var(--navigation-header-height) + 76px)}
+#app main>.compact-intro+.step{margin-top:0;padding-top:0;border-top:0}
+#app main>.empty{padding:0 0 8px;margin-bottom:16px}
+#app main>.empty h1{margin:8px 0}
+#app main>.empty>.lede{margin-bottom:0}
+#app main>.empty+.step{margin-top:0;padding-top:0;border-top:0}
+@media(max-width:600px){
+ #app main .compact-intro>h1{scroll-margin-top:calc(var(--navigation-header-height) + 80px)}
+ #app main .compact-intro:has(.intro-id)>h1{scroll-margin-top:calc(var(--navigation-header-height) + 104px)}
+}

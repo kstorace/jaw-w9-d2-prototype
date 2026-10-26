@@ -1,0 +1,16 @@
+@font-face{font-family:"Source Sans 3";src:url("assets/fonts/SourceSans3-Regular.woff2");font-weight:400}
+@font-face{font-family:"Source Sans 3";src:url("assets/fonts/SourceSans3-Semibold.woff2");font-weight:600}
+.language-preview{margin:0;background:#f7f4ed;color:#142d45;font:400 16px/24px "Source Sans 3",Arial,sans-serif}
+.language-preview *{box-sizing:border-box}
+.entry-header{height:88px;padding:12px 32px;display:flex;align-items:center}
+.entry-header img{display:block;width:174px;max-width:100%;height:auto}
+.entry-content{margin-left:224px;padding:24px 32px 48px;max-width:1056px;min-width:0}
+.entry-content h1{margin:0;font:600 26px/34px "Source Sans 3",Arial,sans-serif}
+.preview-label{margin:8px 0 16px;color:#52616d;font:400 14px/21px "Source Sans 3",Arial,sans-serif}
+.entry-explanation{margin:0;max-width:60ch}
+.language-statuses{margin:24px 0;display:grid;gap:12px}
+.language-statuses>div{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;max-width:480px}
+.language-statuses dt{font-weight:600}.language-statuses dd{margin:0;color:#52616d;overflow-wrap:anywhere}
+.continue-action{display:inline-block;max-width:100%;min-height:44px;padding:12px 18px;border:1px solid #142d45;border-radius:2px;background:#142d45;color:#fcfaf6;text-decoration:none;font:600 16px/24px "Source Sans 3",Arial,sans-serif}
+.continue-action:focus-visible{outline:3px solid #376877;outline-offset:4px}
+@media(max-width:1023px){.entry-header{height:76px;padding:12px 16px}.entry-header img{width:130px}.entry-content{margin-left:0;padding:24px 16px 40px}.language-statuses>div{grid-template-columns:80px minmax(0,1fr);gap:12px}}

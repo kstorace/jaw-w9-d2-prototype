@@ -1,0 +1,78 @@
+/* C2 detailed assessment only; accepted overview/intake and foundations untouched. */
+.layout:has(.c2-assessment) main>.context{scroll-margin-top:calc(var(--navigation-header-height) + 16px)}
+.rb-vacancies:has(.c2-assessment)>.back-link{margin:0 0 12px}
+.rb-vacancies .c2-assessment{border:0;margin:0;padding:0}
+.c2-assessment .c2-identity{padding:0;margin:0 0 24px}
+.c2-assessment .c2-identity .c2-title{font:400 32px/40px "Source Serif 4",Georgia,serif;margin:4px 0}
+.c2-assessment .c2-identity h3{margin:0 0 4px}
+.c2-assessment .c2-identity>p{margin:4px 0}
+.c2-assessment .c2-identity .rb-source-identity{margin:8px 0 0}
+.c2-assessment .c2-group{margin:24px 0}
+.c2-assessment .c2-group>h2{margin:0 0 8px}
+.c2-assessment .c2-group>h2>span{font:400 16px/24px "Source Sans 3",Arial,sans-serif;color:var(--muted);white-space:nowrap}
+.c2-assessment .c2-group-intro{margin:0 0 12px;max-width:90ch}
+.c2-assessment .rb-requirement{padding:12px 0;border-top:1px solid var(--rule)}
+.c2-assessment .c2-requirement-line{display:grid;grid-template-columns:minmax(0,1fr) 172px 120px;align-items:baseline;gap:8px 16px}
+.c2-assessment .c2-requirement-line h3{font:600 20px/28px "Source Sans 3",Arial,sans-serif;margin:0;overflow-wrap:anywhere}
+.c2-assessment .c2-requirement-class{font:400 14px/21px "Source Sans 3",Arial,sans-serif;color:var(--muted)}
+.c2-assessment .c2-requirement-line .rb-signpost{justify-self:start}
+.c2-assessment .rb-qualification{font:400 14px/21px "Source Sans 3",Arial,sans-serif;border:0;padding:0;margin:4px 0;max-width:100%}
+.c2-assessment .rb-support{margin:4px 0 0}
+.c2-assessment .rb-support>summary{min-height:36px;padding:6px 0;font-size:14px;line-height:21px;width:max-content;max-width:100%}
+.c2-assessment .rb-source-comparison{display:block;margin-top:12px;max-width:90ch}
+.c2-assessment .rb-source-register{margin:0 0 16px}
+.c2-assessment .rb-source-label{margin:0 0 8px}
+.c2-assessment .rb-source-register blockquote{padding:8px 12px;margin:0 0 8px}
+.c2-assessment .rb-citation{margin-bottom:12px}
+.c2-assessment .rb-interpretation{margin-top:12px;padding-top:12px;max-width:90ch}
+.c2-assessment .rb-practical,.c2-assessment .rb-decision{margin:24px 0 0;padding:24px 0 0;border-top:1px solid var(--rule)}
+.c2-assessment .rb-practical-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin:16px 0}
+.c2-assessment .rb-practical-grid>div{grid-column:span 2;padding-top:12px}
+.c2-assessment .rb-practical-grid>.c2-practical-unknown{grid-column:span 3}
+.c2-assessment .rb-practical-grid dt{margin:0 0 8px}
+.c2-assessment .rb-practical-grid dd>p{margin:8px 0 0}
+.c2-assessment .rb-decision{border-bottom:0;padding-bottom:0}
+.c2-assessment .rb-decision-options{margin-top:16px;gap:16px}
+.c2-assessment .rb-decision-choice{padding:16px}
+.c2-assessment .rb-decision-choice>p{margin:8px 0 0}
+.c2-assessment .c2-decision-lifecycle{margin:12px 0 0}
+.c2-assessment .c2-source-details{margin:24px 0 0;padding:24px 0 0;border-top:1px solid var(--rule)}
+.c2-assessment .c2-source-details>h2{margin:0 0 8px}
+.c2-assessment .c2-source-details>details{margin:8px 0}
+.c2-assessment h2:focus,.c2-assessment h3:focus{outline:2px solid var(--focus);outline-offset:4px}
+.c2-assessment summary{scroll-margin-top:calc(var(--navigation-header-height) + 20px)}
+.c2-assessment #structured-interpretation .row>div{min-width:0;max-width:100%;overflow-wrap:anywhere}
+@media(width < 1024px){
+ .c2-assessment .c2-identity .c2-title{font-size:28px;line-height:36px}
+ .c2-assessment .c2-requirement-line{grid-template-columns:minmax(0,1fr) auto;gap:4px 12px}
+ .c2-assessment .c2-requirement-line h3{grid-column:1/-1}
+ .c2-assessment .c2-requirement-line .rb-signpost{justify-self:end}
+ .c2-assessment .rb-practical-grid{grid-template-columns:minmax(0,1fr)}
+ .c2-assessment .rb-practical-grid>div,.c2-assessment .rb-practical-grid>.c2-practical-unknown{grid-column:1}
+ .c2-assessment .c2-group>h2>span{display:block}
+}
+
+/* C3 finishing, confined to detailed assessment. */
+.c2-assessment .c3-header-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:8px 24px}
+.c2-assessment .c3-header-top>.c2-title{grid-column:1;grid-row:1;min-width:0}
+.c2-assessment .c3-header-top>.back-link{grid-column:2;grid-row:1;margin:0;justify-self:end;font:400 14px/21px "Source Sans 3",Arial,sans-serif}
+.c2-assessment .c2-identity{margin-bottom:32px}
+.c2-assessment .c3-conditions{font:400 16px/24px "Source Sans 3",Arial,sans-serif;margin-top:8px}
+.c2-assessment .rb-source-identity{font:400 14px/21px "Source Sans 3",Arial,sans-serif}
+.c2-assessment .c3-class-signpost{background:var(--surface);border-color:var(--rule);color:var(--ink);font-weight:400;justify-self:start}
+.c2-assessment .c3-supporting>summary{display:flex;gap:10px;align-items:baseline;min-height:44px;padding:8px 0}
+.c2-assessment .c3-supporting>summary::before{inset-block-start:0;align-self:center}
+.c2-assessment .c3-supporting>summary h2{font:400 24px/32px "Source Sans 3",Arial,sans-serif;margin:0;min-width:0}
+.c2-assessment .c3-supporting>summary h2>span{font:400 16px/24px "Source Sans 3",Arial,sans-serif;color:var(--muted);white-space:nowrap}
+.c2-assessment .rb-requirement{border-top:0}
+.c2-assessment .rb-interpretation{border-top:0;padding-top:4px}
+.c2-assessment .rb-practical-grid{gap:24px 32px}
+.c2-assessment .rb-practical-grid>div{border-top:0}
+.c2-assessment .c2-source-details{border-top:0}
+@media(width < 1024px){
+ .c2-assessment .c3-header-top{grid-template-columns:minmax(0,1fr);gap:4px}
+ .c2-assessment .c3-header-top>.back-link{grid-column:1;grid-row:1;justify-self:start}
+ .c2-assessment .c3-header-top>.c2-title{grid-column:1;grid-row:2}
+ .c2-assessment .c3-supporting>summary h2>span{display:block}
+ .c2-assessment .rb-practical-grid{gap:24px 0}
+}
